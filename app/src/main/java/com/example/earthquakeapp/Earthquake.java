@@ -11,6 +11,7 @@ public class Earthquake {
     private String location;
     private double magnitude;
     private Long timeInMilliseconds;
+    private String url;
 
     /**
      * Constructs a new {@link Earthquake} object.
@@ -21,10 +22,11 @@ public class Earthquake {
      *  earthquake happened
      */
 
-    public Earthquake(String location, double magnitude, Long timeInMilliseconds) {
+    public Earthquake(String location, double magnitude, Long timeInMilliseconds, String url) {
         setLocation(location);
         setMagnitude(magnitude);
         setTimestamp(timeInMilliseconds);
+        setUrl(url);
     }
 
     /**
@@ -104,5 +106,13 @@ public class Earthquake {
 
     public void setTimestamp(Long timestamp) {
         this.timeInMilliseconds = timestamp;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }
